@@ -1,0 +1,36 @@
+---
+title: "website"
+bibliography: ./ref.bib
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+# Hello
+## Welcome
+### to my cool website
+
+This *website* is being **built** from the ***ground up***
+
+- cool item 
+- another cool item!
+
+1. This is number 1
+3. This is number 3
+
+## Old English Philology
+- ### ***Beowulf***
+- *The Dream of the Rood*
+- Old English Riddles
+- Medievalism
+
+## Links
+- [My project](https://thijsporck.com/emergence/)
+- [My supervisor](https://www.universiteitleiden.nl/en/staffmembers/thijs-porck#tab-1)
+
+Please look at @fig-test for an impression of what the *Beowulf* manuscript looked like. @fig-test2 shows Beowulf beheading Grendel [@smith2023].
+
+![Beowulf](https://upload.wikimedia.org/wikipedia/commons/c/c1/Beowulf_Cotton_MS_Vitellius_A_XV_f._132r.jpg){#fig-test fig-align="left" width=42%}
+
+![Beowulf beheads Grendel](./Images/Beowulf-Grendel-head-illustration-British-Race-Legends-1910.webp){#fig-test2 fig-align="left"}
