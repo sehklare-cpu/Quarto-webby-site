@@ -1059,9 +1059,9 @@ $font-size-root: 17px !default;
 // Disable smooth scrolling
 $enable-smooth-scroll: false !default;
 
-// quarto-scss-analysis-annotation { "origin": "litera (builtin theme)" }
+// quarto-scss-analysis-annotation { "origin": "cosmo (builtin theme)" }
 
-$theme: "litera" !default;
+$theme: "cosmo" !default;
 
 //
 // Color system
@@ -1070,28 +1070,28 @@ $theme: "litera" !default;
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
-$gray-300: #ddd !default;
+$gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #373a3c !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #4582ec !default;
+$blue:    #2780e3 !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$purple:  #613d7c !default;
 $pink:    #e83e8c !default;
-$red:     #d9534f !default;
-$orange:  #fd7e14 !default;
-$yellow:  #f0ad4e !default;
-$green:   #02b875 !default;
+$red:     #ff0039 !default;
+$orange:  #f0ad4e !default;
+$yellow:  #ff7518 !default;
+$green:   #3fb618 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #9954bb !default;
 
 $primary:       $blue !default;
-$secondary:     $gray-500 !default;
+$secondary:     $gray-800 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -1099,60 +1099,34 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$min-contrast-ratio:   1.85 !default;
+$min-contrast-ratio:   2.6 !default;
+
+// Options
+
+$enable-rounded: false !default;
 
 // Body
 
-$body-color:                $gray-800 !default;
+$body-color:    $gray-800 !default;
 
 // Fonts
 
-// stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif:           Georgia, Cambria, "Times New Roman", Times, serif !default;
-// stylelint-enable
-
-$font-size-base:              1.1rem !default;
-$headings-font-weight:        700 !default;
-
-// Tables
-
-$table-border-color:          rgba(0, 0, 0, .1) !default;
-
-$table-bg-scale:              0% !default;
-
-// Buttons
-
-$input-btn-padding-y:         .5rem !default;
-$input-btn-padding-x:         1.1rem !default;
-$btn-font-family:             $font-family-sans-serif !default;
-$btn-font-size:               .875rem !default;
-$btn-font-size-sm:            .688rem !default;
-
-$btn-border-radius:           1.078em !default;
-$btn-border-radius-lg:        2.688em !default;
-$btn-border-radius-sm:        .844em !default;
-
-// Forms
-
-$input-border-color:                    rgba(0, 0, 0, .1) !default;
-$input-group-addon-bg:                  $gray-200 !default;
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:    "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$headings-font-weight:      400 !default;
 
 // Navbar
 
-// Tooltips
-
-$tooltip-font-size:                 11px !default;
-
-// Badges
-
-$badge-font-weight:                 400 !default;
-$badge-padding-y:                   .6em !default;
-$badge-padding-x:                   1.2em !default;
+$navbar-dark-hover-color:       rgba($white, 1) !default;
+$navbar-light-hover-color:      rgba($black, .9) !default;
 
 // Alerts
 
-$alert-border-width:                0 !default;
+$alert-border-width:            0 !default;
+
+// Progress bars
+
+$progress-height:               .5rem !default;
 
 
 
@@ -12918,87 +12892,18 @@ main.quarto-banner-title-block > section:first-child > h4 {
 
 // Variables
 
-// Navbar
-
-.navbar {
-  font-size: $font-size-sm;
-  border: 1px solid rgba(0, 0, 0, .1);
+$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
 }
 
 // Typography
 
-p {
-  font-family: $font-family-serif;
-}
-
-blockquote {
-  font-style: italic;
-}
-
-footer {
-  font-size: $font-size-sm;
-}
-
-.lead {
-  font-family: $font-family-sans-serif;
-  color: $gray-600;
-}
-
-// Tables
-
-table,
-.table {
-  font-size: $font-size-sm;
-}
-
-// Navs
-
-.nav,
-.breadcrumb,
-.pagination {
-  font-size: $font-size-sm;
-}
-
-.dropdown-menu {
-  font-size: $font-size-sm;
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
 // Indicators
-
-.alert {
-  font-size: $font-size-sm;
-  color: $white;
-
-  &,
-  p {
-    font-family: $font-family-sans-serif;
-  }
-
-  a,
-  .alert-link {
-    font-weight: 400;
-    color: $white;
-    text-decoration: underline;
-  }
-
-  @each $color, $value in $theme-colors {
-    &-#{$color} {
-      @if $enable-gradients {
-        background: $value linear-gradient($value, mix($body-bg, $value, 15%)) repeat-x;
-      } @else {
-        background-color: $value;
-      }
-    }
-  }
-
-  &-light {
-    &,
-    a,
-    .alert-link {
-      color: $body-color;
-    }
-  }
-}
 
 .badge {
   &.bg-light {
@@ -13006,10 +12911,15 @@ table,
   }
 }
 
-// Containers
+// Progress bars
 
-.list-group {
-  font-size: $font-size-sm;
+.progress {
+  @include box-shadow(none);
+
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
+  }
 }
 
 
@@ -13051,9 +12961,6 @@ table,
 --quarto-scss-export-light: #{$light};
 --quarto-scss-export-dark: #{$dark};
 --quarto-scss-export-body-color: #{$body-color};
---quarto-scss-export-table-border-color: #{$table-border-color};
---quarto-scss-export-input-border-color: #{$input-border-color};
---quarto-scss-export-input-group-addon-bg: #{$input-group-addon-bg};
 --quarto-scss-export-title-banner-color: #{$title-banner-color};
 --quarto-scss-export-title-banner-bg: #{$title-banner-bg};
 --quarto-scss-export-btn-code-copy-color: #{$btn-code-copy-color};
@@ -13087,11 +12994,13 @@ table,
 --quarto-scss-export-footer-fg: #{$footer-fg};
 --quarto-scss-export-popover-bg: #{$popover-bg};
 --quarto-scss-export-input-bg: #{$input-bg};
+--quarto-scss-export-input-border-color: #{$input-border-color};
 --quarto-scss-export-code-annotation-higlight-color: #{$code-annotation-higlight-color};
 --quarto-scss-export-code-annotation-higlight-bg: #{$code-annotation-higlight-bg};
 --quarto-scss-export-table-group-separator-color: #{$table-group-separator-color};
 --quarto-scss-export-table-group-separator-color-lighter: #{$table-group-separator-color-lighter};
 --quarto-scss-export-link-decoration: #{$link-decoration};
+--quarto-scss-export-table-border-color: #{$table-border-color};
 --quarto-scss-export-sidebar-glass-bg: #{$sidebar-glass-bg};
 --quarto-scss-export-color-contrast-dark: #{$color-contrast-dark};
 --quarto-scss-export-color-contrast-light: #{$color-contrast-light};
@@ -13248,6 +13157,7 @@ table,
 --quarto-scss-export-input-btn-font-family: #{$input-btn-font-family};
 --quarto-scss-export-input-btn-focus-color: #{$input-btn-focus-color};
 --quarto-scss-export-btn-color: #{$btn-color};
+--quarto-scss-export-btn-font-family: #{$btn-font-family};
 --quarto-scss-export-btn-white-space: #{$btn-white-space};
 --quarto-scss-export-btn-link-color: #{$btn-link-color};
 --quarto-scss-export-btn-link-hover-color: #{$btn-link-hover-color};
@@ -13283,6 +13193,7 @@ table,
 --quarto-scss-export-form-switch-focus-color: #{$form-switch-focus-color};
 --quarto-scss-export-form-switch-checked-color: #{$form-switch-checked-color};
 --quarto-scss-export-input-group-addon-color: #{$input-group-addon-color};
+--quarto-scss-export-input-group-addon-bg: #{$input-group-addon-bg};
 --quarto-scss-export-input-group-addon-border-color: #{$input-group-addon-border-color};
 --quarto-scss-export-form-select-font-family: #{$form-select-font-family};
 --quarto-scss-export-form-select-color: #{$form-select-color};
