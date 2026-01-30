@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "website",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "website",
+    "section": "Welcome",
+    "text": "Welcome\n\nto my cool website\nThis website is being built from the ground up\n\ncool item\nanother cool item!\n\n\nThis is number 1\nThis is number 3"
+  },
+  {
+    "objectID": "index.html#old-english-philology",
+    "href": "index.html#old-english-philology",
+    "title": "website",
+    "section": "Old English Philology",
+    "text": "Old English Philology\n\nBeowulf\nThe Dream of the Rood\nOld English Riddles\nMedievalism"
+  },
+  {
+    "objectID": "index.html#links",
+    "href": "index.html#links",
+    "title": "website",
+    "section": "Links",
+    "text": "Links\n\nMy project\nMy supervisor\n\nPlease look at Figure 1 for an impression of what the Beowulf manuscript looked like. Figure 2 shows Beowulf beheading Grendel (Smith 2023).\n\n\n\n\n\n\nFigure 1: Beowulf\n\n\n\n\n\n\n\n\n\nFigure 2: Beowulf beheads Grendel"
+  }
+]
